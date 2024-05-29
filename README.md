@@ -24,6 +24,8 @@
 - go run main.go
 - The server will start running at http://localhost:8080.
 
+* [Download from release section if you don't want to compile yourself]
+
 ## Endpoints
 
 ### Upload Endpoint
