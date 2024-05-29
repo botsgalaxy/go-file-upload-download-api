@@ -1,0 +1,4 @@
+.env
+file-storage.db
+/uploads
+/release
