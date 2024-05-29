@@ -38,22 +38,20 @@
         On success:
 
         json
-
-            ```{
+            {
             "status": "success",
             "data": {
             "url": "/download/file_id"
             }
-            }```
+            }
 
         On failure:
 
-            json
-
-        ```{
+        json
+        {
             "status": "error",
             "message": "Error message here"
-        }```
+        }
 
 ### Download Endpoint
 
