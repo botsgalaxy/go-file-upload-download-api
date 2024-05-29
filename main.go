@@ -13,6 +13,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/glebarez/sqlite"
+	"github.com/joho/godotenv"
 )
 
 const (
@@ -22,6 +23,14 @@ const (
 )
 
 var db *sql.DB
+
+func init() {
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
+}
 
 func main() {
 	// Initialize database
@@ -52,7 +61,7 @@ func main() {
 	router.GET("/download/:file_id", handleDownload)
 
 	// Start the server
-	if err := router.Run(":8080"); err != nil {
+	if err := router.Run(); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
 }
